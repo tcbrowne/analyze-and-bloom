@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
@@ -15,11 +14,16 @@ const BlogPost = () => {
       date: '2024-01-22',
       readTime: '12 min read',
       author: 'Taylor Browne',
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=400&fit=crop',
       category: 'Due Diligence',
       fullContent: `
         <div class="prose prose-lg max-w-none">
           <p>As the backbone of North American supply chains, the trucking industry plays a pivotal role in the movement of goods and materials. From food distribution to industrial manufacturing, trucks are integral to business operations across nearly every sector. For M&A professionals, investors, or strategic buyers, understanding the nuances of this industry is critical when conducting financial due diligence (FDD). In this article, we break down the complexities of trucking—specifically differentiating between Truckload (TL) and Less-than-Truckload (LTL) carriers—and highlight key diligence considerations for both business models.</p>
+
+          <div class="my-8">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=400&fit=crop" alt="Highway with trucks transportation" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+            <p class="text-sm text-gray-600 text-center mt-2 italic">Modern trucking operations require sophisticated logistics and fleet management</p>
+          </div>
 
           <h2>Understanding the Business Models: TL vs. LTL</h2>
           <p><strong>Truckload (TL) carriers</strong> dedicate an entire trailer to a single shipper's freight, generally for long-haul routes. These carriers operate with fewer touchpoints and typically transport full pallets or containers, reducing the likelihood of damage or delays.</p>
