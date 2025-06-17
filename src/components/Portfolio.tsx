@@ -1,95 +1,104 @@
 
-import { ExternalLink, Github, BarChart3, Database, TrendingUp } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 
 const Portfolio = () => {
   const projects = [
     {
-      id: 1,
-      title: "Sales Performance Dashboard",
-      description: "Interactive Tableau dashboard analyzing sales trends, customer segments, and revenue forecasting for a Fortune 500 company.",
-      technologies: ["Tableau", "SQL", "Python"],
-      image: "/placeholder.svg",
-      demoLink: "#",
-      githubLink: "#",
-      icon: BarChart3
+      title: 'Sales Performance Dashboard',
+      description: 'Interactive dashboard analyzing sales trends across multiple regions with predictive forecasting capabilities.',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop',
+      tags: ['Tableau', 'SQL', 'Python'],
+      date: '2024',
+      liveUrl: '#',
+      githubUrl: '#'
     },
     {
-      id: 2,
-      title: "Customer Churn Prediction Model",
-      description: "Machine learning model predicting customer churn with 92% accuracy, helping reduce customer attrition by 15%.",
-      technologies: ["Python", "Scikit-learn", "Pandas"],
-      image: "/placeholder.svg",
-      demoLink: "#",
-      githubLink: "#",
-      icon: TrendingUp
+      title: 'Customer Segmentation Analysis',
+      description: 'Machine learning project identifying distinct customer segments to optimize marketing strategies and increase retention.',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
+      tags: ['Python', 'Scikit-learn', 'Clustering'],
+      date: '2024',
+      liveUrl: '#',
+      githubUrl: '#'
     },
     {
-      id: 3,
-      title: "ETL Pipeline for Data Warehouse",
-      description: "Automated ETL pipeline processing 10M+ records daily, integrating multiple data sources for business intelligence.",
-      technologies: ["SQL", "Python", "Apache Airflow"],
-      image: "/placeholder.svg",
-      demoLink: "#",
-      githubLink: "#",
-      icon: Database
+      title: 'Financial Risk Assessment Model',
+      description: 'Predictive model for assessing loan default risk using advanced statistical methods and feature engineering.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
+      tags: ['R', 'Machine Learning', 'Statistics'],
+      date: '2023',
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'Web Analytics Deep Dive',
+      description: 'Comprehensive analysis of website performance metrics with actionable recommendations for UX improvements.',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
+      tags: ['Google Analytics', 'Power BI', 'A/B Testing'],
+      date: '2023',
+      liveUrl: '#',
+      githubUrl: '#'
     }
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A showcase of data analytics projects that deliver measurable business impact
+            A showcase of data-driven solutions that have delivered measurable business impact
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
             <div
-              key={project.id}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100"
+              key={project.title}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
-              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center">
-                <project.icon className="w-16 h-16 text-white" />
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-700 flex items-center">
+                  <Calendar size={14} className="mr-1" />
+                  {project.date}
+                </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {project.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
+                  {project.tags.map((tag) => (
                     <span
-                      key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
+                      key={tag}
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-100 to-teal-100 text-blue-800 border border-blue-200"
                     >
-                      {tech}
+                      <Tag size={12} className="mr-1" />
+                      {tag}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex items-center space-x-4">
+                <div className="flex space-x-4">
                   <a
-                    href={project.demoLink}
-                    className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
+                    href={project.liveUrl}
+                    className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg hover:from-blue-700 hover:to-teal-700 transition-all duration-200 text-sm font-medium"
                   >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>View Project</span>
+                    <ExternalLink size={16} className="mr-2" />
+                    View Project
                   </a>
-                  
                   <a
-                    href={project.githubLink}
-                    className="flex items-center space-x-2 text-gray-600 hover:text-gray-700 font-medium"
+                    href={project.githubUrl}
+                    className="flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 text-sm font-medium"
                   >
-                    <Github className="w-4 h-4" />
-                    <span>Code</span>
+                    <Github size={16} className="mr-2" />
+                    Code
                   </a>
                 </div>
               </div>
