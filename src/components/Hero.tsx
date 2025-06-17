@@ -38,6 +38,12 @@ const Hero = () => {
               View My Work
             </a>
             <a
+              href="#blog"
+              className="px-8 py-4 bg-gradient-to-r from-teal-600 to-indigo-600 text-white rounded-lg font-semibold hover:from-teal-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              View My Blog
+            </a>
+            <a
               href="#contact"
               className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 transform hover:scale-105"
             >
