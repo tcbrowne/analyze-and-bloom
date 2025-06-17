@@ -1,5 +1,4 @@
-
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -72,22 +71,20 @@ ${formData.get('message')}`;
               <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/taylorchristianbrowne/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/tcbrowne"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
                 >
                   <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
