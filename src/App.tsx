@@ -19,12 +19,16 @@ const App = () => {
     }
   }, []);
 
+  // Determine if we're on GitHub Pages
+  const isGitHubPages = window.location.hostname.includes('github.io') || window.location.hostname.includes('githubusercontent.com');
+  const basename = isGitHubPages ? '/analyze-and-bloom' : '';
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/analyze-and-bloom' : ''}>
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

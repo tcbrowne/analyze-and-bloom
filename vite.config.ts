@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: process.env.NODE_ENV === 'production' ? '/analyze-and-bloom/' : '/',
+  base: mode === 'production' && process.env.GITHUB_PAGES ? '/analyze-and-bloom/' : '/',
   server: {
     host: "::",
     port: 8080,
