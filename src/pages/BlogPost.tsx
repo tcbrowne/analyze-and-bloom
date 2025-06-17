@@ -22,7 +22,7 @@ const BlogPost = () => {
           <p>As the backbone of North American supply chains, the trucking industry plays a pivotal role in the movement of goods and materials. From food distribution to industrial manufacturing, trucks are integral to business operations across nearly every sector. For M&A professionals, investors, or strategic buyers, understanding the nuances of this industry is critical when conducting financial due diligence (FDD). In this article, we break down the complexities of trucking—specifically differentiating between Truckload (TL) and Less-than-Truckload (LTL) carriers—and highlight key diligence considerations for both business models.</p>
 
           <div class="my-8">
-            <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&h=400&fit=crop&auto=format&q=75" alt="Multiple trucks at loading docks in distribution center" class="w-full h-64 object-cover rounded-lg shadow-lg" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop&auto=format&q=75" alt="Multiple semi trucks at loading docks with trailers" class="w-full h-64 object-cover rounded-lg shadow-lg" loading="lazy" />
             <p class="text-sm text-gray-600 text-center mt-2 italic">Modern trucking operations require sophisticated logistics and fleet management</p>
           </div>
 
