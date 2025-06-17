@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/analyze-and-bloom/', // 👈 This is the key line to add
-
+  base: '/analyze-and-bloom/',
   server: {
     host: "::",
     port: 8080,
