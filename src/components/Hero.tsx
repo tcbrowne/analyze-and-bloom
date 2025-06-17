@@ -19,7 +19,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Data Analytics
+            Taylor Browne's
             <span className="block bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
               Portfolio
             </span>
