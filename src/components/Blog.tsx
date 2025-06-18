@@ -1,4 +1,3 @@
-
 import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -109,13 +108,13 @@ const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#"
+          <Link
+            to="/blog"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-teal-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             View All Posts
             <ArrowRight size={20} className="ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +8,7 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BlogPost from "./pages/BlogPost";
+import BlogCatalogue from "./pages/BlogCatalogue";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,7 @@ const App = () => {
         <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/blog" element={<BlogCatalogue />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
