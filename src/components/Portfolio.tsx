@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Calendar, Tag, TrendingUp, TrendingDown } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Tag, Building, Handshake } from 'lucide-react';
 
 const Portfolio = () => {
   const sellSideTransactions = [
@@ -117,11 +117,11 @@ const Portfolio = () => {
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center space-x-2">
             {isSellSide ? (
-              <TrendingDown className="text-red-600" size={20} />
+              <Building className="text-blue-600" size={20} />
             ) : (
-              <TrendingUp className="text-green-600" size={20} />
+              <Handshake className="text-green-600" size={20} />
             )}
-            <span className={`px-3 py-1 rounded-full text-xs font-medium ${isSellSide ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+            <span className={`px-3 py-1 rounded-full text-xs font-medium ${isSellSide ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}`}>
               {isSellSide ? 'Sell-Side' : 'Buy-Side'}
             </span>
           </div>
@@ -165,29 +165,31 @@ const Portfolio = () => {
             </p>
           </div>
 
-          {/* Sell-Side Transactions */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <TrendingDown className="text-red-600 mr-3" size={24} />
-              Sell-Side Advisory
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sellSideTransactions.map((transaction, index) => (
-                <TransactionCard key={index} transaction={transaction} isSellSide={true} />
-              ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Sell-Side Transactions */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <Building className="text-blue-600 mr-3" size={24} />
+                Sell-Side Advisory
+              </h3>
+              <div className="space-y-6">
+                {sellSideTransactions.map((transaction, index) => (
+                  <TransactionCard key={index} transaction={transaction} isSellSide={true} />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Buy-Side Transactions */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <TrendingUp className="text-green-600 mr-3" size={24} />
-              Buy-Side Advisory
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {buySideTransactions.map((transaction, index) => (
-                <TransactionCard key={index} transaction={transaction} isSellSide={false} />
-              ))}
+            {/* Buy-Side Transactions */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <Handshake className="text-green-600 mr-3" size={24} />
+                Buy-Side Advisory
+              </h3>
+              <div className="space-y-6">
+                {buySideTransactions.map((transaction, index) => (
+                  <TransactionCard key={index} transaction={transaction} isSellSide={false} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
