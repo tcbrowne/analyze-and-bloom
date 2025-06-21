@@ -1,7 +1,77 @@
 
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Tag, TrendingUp, TrendingDown } from 'lucide-react';
 
 const Portfolio = () => {
+  const sellSideTransactions = [
+    {
+      title: 'Greenhouse Technology Co. - Minority Investment',
+      description: 'Advised leading greenhouse technology company on minority investment by major investment management firm to accelerate growth initiatives.',
+      sector: 'AgTech',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'Growth Investment'
+    },
+    {
+      title: 'Engineering Services Firm - Strategic Acquisition',
+      description: 'Represented engineering consultancy in acquisition by global professional services company to expand Canadian market presence.',
+      sector: 'Professional Services',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'Strategic Acquisition'
+    },
+    {
+      title: 'Digital Solutions Provider - Technology Acquisition',
+      description: 'Advised digital transformation consultancy on acquisition by multinational professional services company to enhance Western Canada capabilities.',
+      sector: 'Technology',
+      value: 'Undisclosed',
+      date: '2022',
+      type: 'Strategic Acquisition'
+    },
+    {
+      title: 'EdTech Platform - Growth Investment',
+      description: 'Represented early childhood education technology platform in C$70M growth investment led by prominent private equity firm.',
+      sector: 'EdTech',
+      value: 'C$70M',
+      date: '2024',
+      type: 'Growth Investment'
+    },
+    {
+      title: 'Specialty Food Brand - Asset Divestiture',
+      description: 'Advised specialty food company on the strategic sale of premium noodle brand to focus on core product lines.',
+      sector: 'Food & Beverage',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'Asset Sale'
+    }
+  ];
+
+  const buySideTransactions = [
+    {
+      title: 'Transportation Group - Logistics Acquisition',
+      description: 'Advised transportation conglomerate on acquisition of contract logistics provider to expand service offerings.',
+      sector: 'Transportation',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'Strategic Acquisition'
+    },
+    {
+      title: 'Private Equity - Food Ingredients Investment',
+      description: 'Represented private equity firm in acquisition of stake in specialty food ingredients company serving Ontario market.',
+      sector: 'Food Ingredients',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'PE Investment'
+    },
+    {
+      title: 'Forest Services Provider - International Expansion',
+      description: 'Advised forest services company on acquisition of international forestry firm to expand global capabilities.',
+      sector: 'Forestry',
+      value: 'Undisclosed',
+      date: '2024',
+      type: 'Strategic Acquisition'
+    }
+  ];
+
   const projects = [
     {
       title: 'Sales Performance Dashboard',
@@ -41,9 +111,88 @@ const Portfolio = () => {
     }
   ];
 
+  const TransactionCard = ({ transaction, isSellSide }) => (
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+      <div className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-center space-x-2">
+            {isSellSide ? (
+              <TrendingDown className="text-red-600" size={20} />
+            ) : (
+              <TrendingUp className="text-green-600" size={20} />
+            )}
+            <span className={`px-3 py-1 rounded-full text-xs font-medium ${isSellSide ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+              {isSellSide ? 'Sell-Side' : 'Buy-Side'}
+            </span>
+          </div>
+          <div className="text-right">
+            <div className="text-sm text-gray-500 flex items-center">
+              <Calendar size={14} className="mr-1" />
+              {transaction.date}
+            </div>
+          </div>
+        </div>
+        
+        <h3 className="text-lg font-bold text-gray-900 mb-2">{transaction.title}</h3>
+        <p className="text-gray-600 mb-4 text-sm leading-relaxed">{transaction.description}</p>
+        
+        <div className="flex flex-wrap gap-2 mb-3">
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
+            <Tag size={10} className="mr-1" />
+            {transaction.sector}
+          </span>
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">
+            {transaction.type}
+          </span>
+        </div>
+        
+        <div className="text-sm font-semibold text-gray-700">
+          Transaction Value: {transaction.value}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Featured Transactions Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Transactions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Recent M&A transactions and investments where we provided financial due diligence and advisory services
+            </p>
+          </div>
+
+          {/* Sell-Side Transactions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <TrendingDown className="text-red-600 mr-3" size={24} />
+              Sell-Side Advisory
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sellSideTransactions.map((transaction, index) => (
+                <TransactionCard key={index} transaction={transaction} isSellSide={true} />
+              ))}
+            </div>
+          </div>
+
+          {/* Buy-Side Transactions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <TrendingUp className="text-green-600 mr-3" size={24} />
+              Buy-Side Advisory
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {buySideTransactions.map((transaction, index) => (
+                <TransactionCard key={index} transaction={transaction} isSellSide={false} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Projects Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
