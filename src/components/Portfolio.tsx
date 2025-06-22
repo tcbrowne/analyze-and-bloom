@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github, Calendar, Tag, Handshake } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -113,7 +114,7 @@ const Portfolio = () => {
   ];
 
   const TransactionCard = ({ transaction, isSellSide }) => (
-    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 min-w-[350px]">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center space-x-2">
@@ -150,11 +151,6 @@ const Portfolio = () => {
     </Card>
   );
 
-  const allTransactions = [
-    ...sellSideTransactions.map(t => ({ ...t, isSellSide: true })),
-    ...buySideTransactions.map(t => ({ ...t, isSellSide: false }))
-  ];
-
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,18 +163,46 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Carousel orientation="vertical" className="w-full">
-              <CarouselContent className="-mt-4 h-[800px]">
-                {allTransactions.map((transaction, index) => (
-                  <CarouselItem key={index} className="pt-4 basis-1/2">
-                    <TransactionCard transaction={transaction} isSellSide={transaction.isSellSide} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-1/2 -translate-x-1/2 -top-12" />
-              <CarouselNext className="left-1/2 -translate-x-1/2 -bottom-12" />
-            </Carousel>
+          {/* Sell-Side Transactions Carousel */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+              <Handshake className="text-blue-600 mr-3" size={24} />
+              Sell-Side Advisory
+            </h3>
+            <div className="max-w-6xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent className="-ml-4">
+                  {sellSideTransactions.map((transaction, index) => (
+                    <CarouselItem key={index} className="pl-4 basis-auto">
+                      <TransactionCard transaction={transaction} isSellSide={true} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="-left-12" />
+                <CarouselNext className="-right-12" />
+              </Carousel>
+            </div>
+          </div>
+
+          {/* Buy-Side Transactions Carousel */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+              <Handshake className="text-green-600 mr-3" size={24} />
+              Buy-Side Advisory
+            </h3>
+            <div className="max-w-6xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent className="-ml-4">
+                  {buySideTransactions.map((transaction, index) => (
+                    <CarouselItem key={index} className="pl-4 basis-auto">
+                      <TransactionCard transaction={transaction} isSellSide={false} />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="-left-12" />
+                <CarouselNext className="-right-12" />
+              </Carousel>
+            </div>
           </div>
         </div>
 
