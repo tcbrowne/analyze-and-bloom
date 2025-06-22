@@ -1,5 +1,6 @@
-
-import { ExternalLink, Github, Calendar, Tag, Building, Handshake } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Tag, Handshake } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Portfolio = () => {
   const sellSideTransactions = [
@@ -112,15 +113,11 @@ const Portfolio = () => {
   ];
 
   const TransactionCard = ({ transaction, isSellSide }) => (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-      <div className="p-6">
+    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+      <CardContent className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center space-x-2">
-            {isSellSide ? (
-              <Building className="text-blue-600" size={20} />
-            ) : (
-              <Handshake className="text-green-600" size={20} />
-            )}
+            <Handshake className={isSellSide ? "text-blue-600" : "text-green-600"} size={20} />
             <span className={`px-3 py-1 rounded-full text-xs font-medium ${isSellSide ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}`}>
               {isSellSide ? 'Sell-Side' : 'Buy-Side'}
             </span>
@@ -149,9 +146,14 @@ const Portfolio = () => {
         <div className="text-sm font-semibold text-gray-700">
           Transaction Value: {transaction.value}
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
+
+  const allTransactions = [
+    ...sellSideTransactions.map(t => ({ ...t, isSellSide: true })),
+    ...buySideTransactions.map(t => ({ ...t, isSellSide: false }))
+  ];
 
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -165,32 +167,18 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Sell-Side Transactions */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Building className="text-blue-600 mr-3" size={24} />
-                Sell-Side Advisory
-              </h3>
-              <div className="space-y-6">
-                {sellSideTransactions.map((transaction, index) => (
-                  <TransactionCard key={index} transaction={transaction} isSellSide={true} />
+          <div className="max-w-4xl mx-auto">
+            <Carousel orientation="vertical" className="w-full">
+              <CarouselContent className="-mt-4 h-[800px]">
+                {allTransactions.map((transaction, index) => (
+                  <CarouselItem key={index} className="pt-4 basis-1/2">
+                    <TransactionCard transaction={transaction} isSellSide={transaction.isSellSide} />
+                  </CarouselItem>
                 ))}
-              </div>
-            </div>
-
-            {/* Buy-Side Transactions */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Handshake className="text-green-600 mr-3" size={24} />
-                Buy-Side Advisory
-              </h3>
-              <div className="space-y-6">
-                {buySideTransactions.map((transaction, index) => (
-                  <TransactionCard key={index} transaction={transaction} isSellSide={false} />
-                ))}
-              </div>
-            </div>
+              </CarouselContent>
+              <CarouselPrevious className="left-1/2 -translate-x-1/2 -top-12" />
+              <CarouselNext className="left-1/2 -translate-x-1/2 -bottom-12" />
+            </Carousel>
           </div>
         </div>
 
