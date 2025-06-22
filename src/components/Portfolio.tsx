@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Calendar, Tag, Handshake } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -114,7 +113,7 @@ const Portfolio = () => {
   ];
 
   const TransactionCard = ({ transaction, isSellSide }) => (
-    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 min-w-[350px]">
+    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 min-w-[280px]">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center space-x-2">
