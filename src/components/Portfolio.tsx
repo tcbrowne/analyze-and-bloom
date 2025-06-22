@@ -113,7 +113,7 @@ const Portfolio = () => {
   ];
 
   const TransactionCard = ({ transaction, isSellSide }) => (
-    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 min-w-[280px]">
+    <Card className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 w-80">
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center space-x-2">
@@ -172,7 +172,7 @@ const Portfolio = () => {
               <Carousel className="w-full">
                 <CarouselContent className="-ml-4">
                   {sellSideTransactions.map((transaction, index) => (
-                    <CarouselItem key={index} className="pl-4 basis-auto">
+                    <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/3">
                       <TransactionCard transaction={transaction} isSellSide={true} />
                     </CarouselItem>
                   ))}
@@ -193,7 +193,7 @@ const Portfolio = () => {
               <Carousel className="w-full">
                 <CarouselContent className="-ml-4">
                   {buySideTransactions.map((transaction, index) => (
-                    <CarouselItem key={index} className="pl-4 basis-auto">
+                    <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/3">
                       <TransactionCard transaction={transaction} isSellSide={false} />
                     </CarouselItem>
                   ))}
