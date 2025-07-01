@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Calendar, Tag, Handshake, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,69 +5,69 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const Portfolio = () => {
   const sellSideTransactions = [
     {
-      title: 'Greenhouse Technology Co. - Minority Investment',
-      description: 'Advised leading greenhouse technology company on minority investment by major investment management firm to accelerate growth initiatives.',
+      title: 'Greenhouse Produce Grower',
+      description: 'A vertically integrated North American greenhouse produce company secured a strategic minority investment from a global asset management firm focused on sustainable and responsible investing. The capital will support ongoing expansion and innovation in controlled environment agriculture.',
       sector: 'AgTech',
-      value: 'Undisclosed',
+      value: '$150–200M',
       date: '2024',
-      type: 'Growth Investment'
+      type: 'Minority Investment'
     },
     {
-      title: 'Engineering Services Firm - Strategic Acquisition',
-      description: 'Represented engineering consultancy in acquisition by global professional services company to expand Canadian market presence.',
+      title: 'Engineering & Consulting Firm',
+      description: 'A multi-disciplinary engineering and professional services firm was acquired by an international leader in sustainable design and infrastructure delivery. The transaction enhances the buyer\'s footprint and technical depth across North America.',
       sector: 'Professional Services',
-      value: 'Undisclosed',
+      value: '$130–160M',
       date: '2024',
       type: 'Strategic Acquisition'
     },
     {
-      title: 'Digital Solutions Provider - Technology Acquisition',
-      description: 'Advised digital transformation consultancy on acquisition by multinational professional services company to enhance Western Canada capabilities.',
+      title: 'IT Consulting Firm',
+      description: 'A Canadian digital transformation consultancy specializing in cloud, enterprise applications, and public sector modernization was acquired by a multinational professional services company. The acquisition strengthens the acquirer\'s capabilities in Western Canada.',
       sector: 'Technology',
-      value: 'Undisclosed',
-      date: '2022',
+      value: '$40–60M',
+      date: '2024',
       type: 'Strategic Acquisition'
     },
     {
-      title: 'EdTech Platform - Growth Investment',
-      description: 'Represented early childhood education technology platform in C$70M growth investment led by prominent private equity firm.',
+      title: 'Early Childhood Education SaaS Provider',
+      description: 'A leading software platform serving the early childhood education sector received a ~$70M CAD growth equity investment. The capital will fuel continued product development and expansion into new markets.',
       sector: 'EdTech',
-      value: 'C$70M',
+      value: '$25–35M',
       date: '2024',
       type: 'Growth Investment'
     },
     {
-      title: 'Specialty Food Brand - Asset Divestiture',
-      description: 'Advised specialty food company on the strategic sale of premium noodle brand to focus on core product lines.',
+      title: 'Specialty Food Producer',
+      description: 'A family-owned North American specialty food manufacturer completed a successful sale to a global food group. The deal supports succession planning and provides the buyer with an established brand and operational base in Canada.',
       sector: 'Food & Beverage',
-      value: 'Undisclosed',
+      value: '$30–45M',
       date: '2024',
-      type: 'Asset Sale'
+      type: 'Strategic Acquisition'
     }
   ];
 
   const buySideTransactions = [
     {
-      title: 'Transportation Group - Logistics Acquisition',
-      description: 'Advised transportation conglomerate on acquisition of contract logistics provider to expand service offerings.',
+      title: 'Logistics & Trucking Platform',
+      description: 'A diversified transportation and logistics group expanded its network with the acquisition of a regional LTL and TL provider, strengthening its presence in Ontario and enhancing final-mile and contract delivery capabilities.',
       sector: 'Transportation',
-      value: 'Undisclosed',
+      value: '$20–30M',
       date: '2024',
       type: 'Strategic Acquisition'
     },
     {
-      title: 'Private Equity - Food Ingredients Investment',
-      description: 'Represented private equity firm in acquisition of stake in specialty food ingredients company serving Ontario market.',
+      title: 'Private Equity Investment in Food Ingredients Company',
+      description: 'A Canadian private equity firm acquired a significant stake in a specialty food ingredients company. The investment will support product innovation and capacity expansion to meet growing demand in the health-conscious consumer segment.',
       sector: 'Food Ingredients',
-      value: 'Undisclosed',
+      value: '$50–70M',
       date: '2024',
       type: 'PE Investment'
     },
     {
-      title: 'Forest Services Provider - International Expansion',
-      description: 'Advised forest services company on acquisition of international forestry firm to expand global capabilities.',
+      title: 'Forestry Services Company',
+      description: 'A Canadian reforestation services company acquired a leading U.S.-based producer of container-grown seedlings. The acquisition expands the buyer\'s geographic footprint and strengthens its capabilities in sustainable forestry and seedling technology.',
       sector: 'Forestry',
-      value: 'Undisclosed',
+      value: '$25–35M',
       date: '2024',
       type: 'Strategic Acquisition'
     }
@@ -145,7 +144,7 @@ const Portfolio = () => {
         </div>
         
         <div className="text-sm font-semibold text-gray-700">
-          Transaction Value: {transaction.value}
+          Estimated Revenue: {transaction.value}
         </div>
       </CardContent>
     </Card>
