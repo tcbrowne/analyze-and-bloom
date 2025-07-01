@@ -1,4 +1,5 @@
-import { ExternalLink, Github, Calendar, Tag, Handshake } from 'lucide-react';
+
+import { ExternalLink, Github, Calendar, Tag, Handshake, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -168,7 +169,13 @@ const Portfolio = () => {
               <Handshake className="text-blue-600 mr-3" size={24} />
               Sell-Side Advisory
             </h3>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto relative">
+              {/* Swipe indicator */}
+              <div className="flex items-center justify-center mb-4 text-gray-500 text-sm">
+                <ChevronLeft size={16} className="mr-1" />
+                <span>Swipe to see more deals</span>
+                <ChevronRight size={16} className="ml-1" />
+              </div>
               <Carousel className="w-full">
                 <CarouselContent className="-ml-4">
                   {sellSideTransactions.map((transaction, index) => (
@@ -177,8 +184,8 @@ const Portfolio = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="-left-12" />
-                <CarouselNext className="-right-12" />
+                <CarouselPrevious className="-left-12 bg-white shadow-lg border-2 hover:bg-blue-50 hover:border-blue-200" />
+                <CarouselNext className="-right-12 bg-white shadow-lg border-2 hover:bg-blue-50 hover:border-blue-200" />
               </Carousel>
             </div>
           </div>
@@ -189,7 +196,13 @@ const Portfolio = () => {
               <Handshake className="text-green-600 mr-3" size={24} />
               Buy-Side Advisory
             </h3>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto relative">
+              {/* Swipe indicator */}
+              <div className="flex items-center justify-center mb-4 text-gray-500 text-sm">
+                <ChevronLeft size={16} className="mr-1" />
+                <span>Swipe to see more deals</span>
+                <ChevronRight size={16} className="ml-1" />
+              </div>
               <Carousel className="w-full">
                 <CarouselContent className="-ml-4">
                   {buySideTransactions.map((transaction, index) => (
@@ -198,8 +211,8 @@ const Portfolio = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="-left-12" />
-                <CarouselNext className="-right-12" />
+                <CarouselPrevious className="-left-12 bg-white shadow-lg border-2 hover:bg-green-50 hover:border-green-200" />
+                <CarouselNext className="-right-12 bg-white shadow-lg border-2 hover:bg-green-50 hover:border-green-200" />
               </Carousel>
             </div>
           </div>
