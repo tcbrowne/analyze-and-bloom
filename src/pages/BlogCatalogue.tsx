@@ -7,6 +7,16 @@ import Footer from '@/components/Footer';
 const BlogCatalogue = () => {
   const blogPosts = [
     {
+      slug: 'ai-in-transactions-advisory',
+      title: 'AI in Transactions Advisory: Efficiency Gains, Commoditized Outputs, and the Threat to True Deal Advisory',
+      excerpt: 'Artificial intelligence is accelerating the pace of change in the M&A ecosystem. While efficiency gains are real and valuable, they risk pushing the industry toward commoditized outputs and "race to the bottom" pricing dynamics.',
+      date: '2024-01-29',
+      readTime: '18 min read',
+      author: 'Taylor Browne',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
+      category: 'Trends'
+    },
+    {
       slug: 'navigating-trucking-industry-financial-due-diligence',
       title: 'Navigating the Trucking Industry: A Financial Due Diligence Deep Dive',
       excerpt: 'As the backbone of North American supply chains, the trucking industry plays a pivotal role in the movement of goods and materials. Understanding the nuances of Truckload vs Less-than-Truckload carriers is critical for M&A professionals.',
