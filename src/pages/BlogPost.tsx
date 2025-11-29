@@ -18,12 +18,13 @@ const BlogPost = () => {
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
       category: 'Trends',
       fullContent: `
-        <div class="prose prose-lg max-w-none">
-          <p>Artificial intelligence is accelerating the pace of change in the M&A ecosystem. From automated financial models to AI-assisted due diligence, tools now exist that can parse data rooms, screen contracts, generate working capital trends, and draft diligence reports in minutes.</p>
+        <div class="lead-paragraph">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6">Artificial intelligence is accelerating the pace of change in the M&A ecosystem. From automated financial models to AI-assisted due diligence, tools now exist that can parse data rooms, screen contracts, generate working capital trends, and draft diligence reports in minutes.</p>
 
-          <p>For deal advisors, these innovations offer immense promise. They reduce manual hours, speed up insights, and allow more focus on higher-value judgment calls. Yet the industry faces a growing paradox: the same technologies that increase productivity also risk commoditizing due diligence and deal analytics—shifting competition toward efficiency rather than expertise.</p>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">For deal advisors, these innovations offer immense promise. They reduce manual hours, speed up insights, and allow more focus on higher-value judgment calls. Yet the industry faces a growing paradox: the same technologies that increase productivity also risk commoditizing due diligence and deal analytics—shifting competition toward efficiency rather than expertise.</p>
 
-          <p>As AI becomes embedded in transaction workflows, the perceived value of traditional advisory is at risk of being overshadowed by automation.</p>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8 pb-8 border-b border-gray-200">As AI becomes embedded in transaction workflows, the perceived value of traditional advisory is at risk of being overshadowed by automation.</p>
+        </div>
 
           <h2>1. AI Rebases the Cost Structure of Due Diligence</h2>
           
@@ -168,13 +169,19 @@ const BlogPost = () => {
           <h3>f. Narrative building</h3>
           <p>Framing the story for investment committees, lenders, and transaction partners.</p>
 
-          <p class="text-xl font-semibold my-6">AI can produce analysis. Only humans can produce conviction.</p>
+          <div class="my-8 p-6 bg-gradient-to-r from-blue-50 to-teal-50 border-l-4 border-blue-600 rounded-r-lg">
+            <p class="text-2xl font-bold text-gray-900 italic">AI can produce analysis. Only humans can produce conviction.</p>
+          </div>
 
           <h2>7. The Path Forward: Redefining the Value Proposition of M&A Advisory</h2>
           
           <p>To avoid commoditization, firms must pivot from:</p>
           
-          <p class="text-center text-lg my-4">"We produce deliverables."<br/>to<br/>"We provide judgment that informs investment decisions."</p>
+          <div class="my-8 p-8 bg-gray-50 rounded-xl text-center">
+            <p class="text-xl text-gray-600 mb-2 line-through">"We produce deliverables."</p>
+            <p class="text-3xl font-bold text-blue-600 my-4">↓</p>
+            <p class="text-xl text-gray-900 font-semibold">"We provide judgment that informs investment decisions."</p>
+          </div>
 
           <p>This means:</p>
           
@@ -189,20 +196,26 @@ const BlogPost = () => {
 
           <p>The firms that thrive will be those that present AI not as a discount mechanism, but as an amplifier of expertise.</p>
 
-          <h2>Conclusion</h2>
+          <div class="mt-12 mb-8">
+            <h2>Conclusion</h2>
           
-          <p>AI will unquestionably reshape due diligence, deal analytics, and the broader M&A advisory landscape. While efficiency gains are real and valuable, they risk pushing the industry toward commoditized outputs and "race to the bottom" pricing dynamics.</p>
+            <p>AI will unquestionably reshape due diligence, deal analytics, and the broader M&A advisory landscape. While efficiency gains are real and valuable, they risk pushing the industry toward commoditized outputs and "race to the bottom" pricing dynamics.</p>
 
-          <p>The future of transactions advisory will belong to the firms that use AI to enhance strategic thinking, not replace it. In a world where the analytical baseline becomes universally automated, human judgment, skepticism, and strategic clarity will be the differentiators that clients pay for.</p>
+            <div class="my-8 p-8 bg-gradient-to-br from-blue-600 to-teal-600 text-white rounded-2xl shadow-xl">
+              <p class="text-lg leading-relaxed font-medium">The future of transactions advisory will belong to the firms that use AI to enhance strategic thinking, not replace it. In a world where the analytical baseline becomes universally automated, human judgment, skepticism, and strategic clarity will be the differentiators that clients pay for.</p>
+            </div>
+          </div>
 
-          <h3>References</h3>
-          
-          <ul>
-            <li>Autor, D. (2015). Why Are There Still So Many Jobs? Journal of Economic Perspectives.</li>
-            <li>Deloitte Insights (2023). AI in Advisory and the Automation of Analytics.</li>
-            <li>McKinsey Global Institute (2023). The Economic Potential of Generative AI in Finance.</li>
-            <li>Susskind, R., & Susskind, D. (2015). The Future of the Professions. Oxford University Press.</li>
-          </ul>
+          <div class="mt-16 pt-8 border-t-2 border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">References</h3>
+            
+            <div class="space-y-3 text-sm text-gray-600 bg-gray-50 p-6 rounded-lg">
+              <p class="leading-relaxed">Autor, D. (2015). <em>Why Are There Still So Many Jobs?</em> Journal of Economic Perspectives.</p>
+              <p class="leading-relaxed">Deloitte Insights (2023). <em>AI in Advisory and the Automation of Analytics.</em></p>
+              <p class="leading-relaxed">McKinsey Global Institute (2023). <em>The Economic Potential of Generative AI in Finance.</em></p>
+              <p class="leading-relaxed">Susskind, R., & Susskind, D. (2015). <em>The Future of the Professions.</em> Oxford University Press.</p>
+            </div>
+          </div>
         </div>
       `
     },
@@ -367,7 +380,7 @@ const BlogPost = () => {
           </Link>
           
           <div 
-            className="prose prose-lg max-w-none"
+            className="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b-2 prose-h2:border-blue-100 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-li:text-gray-700 prose-strong:text-gray-900 prose-strong:font-semibold prose-ul:my-6 prose-ul:space-y-2 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.fullContent }}
           />
         </div>
