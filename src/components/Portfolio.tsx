@@ -75,38 +75,47 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'Sales Performance Dashboard',
-      description: 'Interactive dashboard analyzing sales trends across multiple regions with predictive forecasting capabilities.',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop',
-      tags: ['Tableau', 'SQL', 'Python'],
+      title: 'Pre-LOI Deal Thesis Validation',
+      description: 'Comprehensive validation framework for evaluating investment theses before issuing Letters of Intent. Combines automated data extraction with advanced analytics to assess strategic fit, market positioning, and value creation opportunities.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      tags: ['Alteryx', 'Tableau', 'Python', 'REGEX'],
       date: '2024',
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'Customer Segmentation Analysis',
-      description: 'Machine learning project identifying distinct customer segments to optimize marketing strategies and increase retention.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-      tags: ['Python', 'Scikit-learn', 'Clustering'],
+      title: 'Buy-side Risk Assessment with Analytics',
+      description: 'Analytics-driven risk assessment platform for buy-side due diligence. Identifies operational, financial, and market-related risks through systematic data analysis and visualization of key risk indicators.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      tags: ['Alteryx', 'Tableau'],
       date: '2024',
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'Financial Risk Assessment Model',
-      description: 'Predictive model for assessing loan default risk using advanced statistical methods and feature engineering.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
-      tags: ['R', 'Machine Learning', 'Statistics'],
-      date: '2023',
+      title: 'Sell-Side Readiness with Analytics',
+      description: 'Comprehensive sell-side preparation framework utilizing clustering analysis to benchmark performance, identify value drivers, and optimize positioning. Helps sellers prepare data rooms and address potential buyer concerns proactively.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
+      tags: ['Alteryx', 'Tableau', 'Clustering'],
+      date: '2024',
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: 'Web Analytics Deep Dive',
-      description: 'Comprehensive analysis of website performance metrics with actionable recommendations for UX improvements.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
-      tags: ['Google Analytics', 'Power BI', 'A/B Testing'],
-      date: '2023',
+      title: 'Payroll and Expense Analytics',
+      description: 'Deep-dive analysis of payroll structures and expense patterns for due diligence purposes. Identifies anomalies, validates compensation structures, and assesses operational efficiency through detailed workforce analytics.',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=300&fit=crop',
+      tags: ['Alteryx', 'Tableau'],
+      date: '2024',
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'General Ledger Analytic Deep Dive',
+      description: 'Comprehensive analysis of general ledger data to validate financial statements, identify accounting irregularities, and assess quality of earnings. Combines automated data extraction with Python-based analytical procedures.',
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&h=300&fit=crop',
+      tags: ['Alteryx', 'Tableau', 'Python'],
+      date: '2024',
       liveUrl: '#',
       githubUrl: '#'
     }
