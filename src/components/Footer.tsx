@@ -1,5 +1,5 @@
 
-import { Heart } from 'lucide-react';
+
 
 const Footer = () => {
   return (
@@ -11,12 +11,6 @@ const Footer = () => {
               Analytics, M&A, and more
             </h3>
             <p className="text-gray-400 mt-1">Transforming data into insights</p>
-          </div>
-          
-          <div className="flex items-center space-x-2 text-gray-400">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>for data-driven decisions</span>
           </div>
         </div>
         
