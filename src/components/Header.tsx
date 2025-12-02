@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, User, FolderOpen, FileText, Mail } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
 
   const navItems = [
@@ -15,8 +16,24 @@ const Header = () => {
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
-  const getNavHref = (href: string) => {
-    return isHomePage ? href : `/${href}`;
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+    
+    if (isHomePage) {
+      // Already on homepage, just scroll
+      const element = document.getElementById(elementId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to homepage first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+    
+    setIsMenuOpen(false);
   };
 
   return (
@@ -35,7 +52,8 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={getNavHref(item.href)}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
                 >
                   <item.icon size={16} />
@@ -63,9 +81,9 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={getNavHref(item.href)}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   <item.icon size={16} />
                   <span>{item.name}</span>
