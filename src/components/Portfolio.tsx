@@ -86,7 +86,7 @@ const Portfolio = () => {
     {
       title: 'Buy-side Risk Assessment with Analytics',
       description: 'Analytics-driven risk assessment platform for buy-side due diligence. Identifies operational, financial, and market-related risks through systematic data analysis and visualization of key risk indicators.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&h=300&fit=crop',
       tags: ['Alteryx', 'Tableau'],
       date: '2024',
       liveUrl: '#',
