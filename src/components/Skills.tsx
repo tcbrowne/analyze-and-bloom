@@ -1,6 +1,8 @@
 import { BarChart, Database, Brain, Code, PieChart, TrendingUp } from 'lucide-react';
 
 const Skills = () => {
+  const maxYears = 8;
+
   const skills = [
     {
       icon: Database,
@@ -40,8 +42,6 @@ const Skills = () => {
     },
   ];
 
-  const maxYears = 8;
-
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,25 +68,15 @@ const Skills = () => {
               <p className="text-gray-600 mb-4">{skill.description}</p>
               
               <div className="relative">
-                <div className="flex justify-between text-sm text-gray-600 mb-2">
+                <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Experience</span>
                   <span>{skill.years} {skill.years === 1 ? 'year' : 'years'}</span>
                 </div>
-                <div className="flex gap-1">
-                  {Array.from({ length: maxYears }).map((_, index) => (
-                    <div
-                      key={index}
-                      className={`h-8 flex-1 rounded-sm transition-all duration-300 ${
-                        index < skill.years
-                          ? 'bg-gradient-to-t from-blue-600 to-teal-400'
-                          : 'bg-gray-200'
-                      }`}
-                    />
-                  ))}
-                </div>
-                <div className="flex justify-between text-xs text-gray-400 mt-1">
-                  <span>0</span>
-                  <span>{maxYears}+ yrs</span>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${(skill.years / maxYears) * 100}%` }}
+                  ></div>
                 </div>
               </div>
             </div>
