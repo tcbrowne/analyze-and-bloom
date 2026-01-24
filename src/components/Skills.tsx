@@ -70,13 +70,17 @@ const Skills = () => {
               <div className="relative">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Experience</span>
-                  <span>{skill.years} {skill.years === 1 ? 'year' : 'years'}</span>
+                  <span>{skill.years}+ years</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
                     className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: `${(skill.years / maxYears) * 100}%` }}
                   ></div>
+                </div>
+                <div className="flex justify-between text-xs text-gray-400 mt-1">
+                  <span>0</span>
+                  <span>8+ yrs</span>
                 </div>
               </div>
             </div>
