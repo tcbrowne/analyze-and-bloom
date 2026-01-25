@@ -68,15 +68,22 @@ const Skills = () => {
               <p className="text-gray-600 mb-4">{skill.description}</p>
               
               <div className="relative">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
+                <div className="text-sm text-gray-600 mb-1">
                   <span>Experience</span>
-                  <span>{skill.years}+ years</span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${(skill.years / maxYears) * 100}%` }}
-                  ></div>
+                <div className="relative w-full">
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-blue-500 to-teal-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${(skill.years / maxYears) * 100}%` }}
+                    ></div>
+                  </div>
+                  <span 
+                    className="absolute -top-6 text-sm font-medium text-gray-700 transform -translate-x-1/2"
+                    style={{ left: `${(skill.years / maxYears) * 100}%` }}
+                  >
+                    {skill.years}+
+                  </span>
                 </div>
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
                   {Array.from({ length: maxYears + 1 }).map((_, i) => (
