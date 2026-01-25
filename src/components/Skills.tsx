@@ -82,7 +82,7 @@ const Skills = () => {
                     className="absolute -top-6 text-sm font-medium text-gray-700 transform -translate-x-1/2"
                     style={{ left: `${(skill.years / maxYears) * 100}%` }}
                   >
-                    {skill.years}+
+                    {skill.years}+ years
                   </span>
                 </div>
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
