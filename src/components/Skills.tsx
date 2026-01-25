@@ -79,8 +79,9 @@ const Skills = () => {
                   ></div>
                 </div>
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
-                  <span>0</span>
-                  <span>8+ yrs</span>
+                  {Array.from({ length: maxYears + 1 }).map((_, i) => (
+                    <span key={i}>{i === maxYears ? '8+' : i}</span>
+                  ))}
                 </div>
               </div>
             </div>
