@@ -27,10 +27,10 @@ const Skills = () => {
     },
     {
       icon: Code,
-      name: 'Python & R',
+      name: 'Data Analytics',
       years: 5,
-      description: 'Pandas, NumPy, Scikit-learn, Tidyverse',
-      backDescription: 'Built data processing pipelines, automated reporting systems, and machine learning models. Proficient in data wrangling, statistical analysis, and creating reproducible research workflows using Jupyter notebooks and R Markdown.'
+      description: 'Python, R, Alteryx, Pandas, NumPy, Tidyverse',
+      backDescription: 'Built data processing pipelines, automated reporting systems, and analytical models using a variety of tools. Proficient in data wrangling, statistical analysis, and creating reproducible workflows across Python, R, and Alteryx platforms.'
     },
     {
       icon: BarChart,
@@ -59,6 +59,13 @@ const Skills = () => {
       years: 5,
       description: 'KPI Development, Dashboard Design',
       backDescription: 'Led BI initiatives from requirements gathering to implementation. Designed KPI frameworks, built self-service analytics platforms, and partnered with leadership to establish data-driven decision-making cultures across organizations.'
+    },
+    {
+      icon: TrendingUp,
+      name: 'M&A and TAS',
+      years: 4,
+      description: 'Due Diligence, Deal Analytics, Integration',
+      backDescription: 'Supported M&A and Transaction Advisory Services engagements through financial data analysis, quality of earnings assessments, and due diligence analytics. Built models to evaluate deal viability, identify risks, and streamline post-merger integration planning.'
     },
   ];
 
