@@ -34,9 +34,9 @@ const Skills = () => {
     },
     {
       icon: BarChart,
-      name: 'Deal & M&A Analytics',
+      name: 'Deal Analytics',
       years: 4,
-      description: 'Deal Modeling, Integration Analytics, Synergy Analysis',
+      description: 'Pre-LOI Deal Thesis Validation, Sell-Side & Buy-Side Analytics, Sales Cube Analysis',
       backDescription: 'Built data-driven models to evaluate deal viability, quantify synergies, and streamline post-merger integration planning. Leveraged analytics to identify trends in financial data, automate due diligence workflows, and deliver actionable insights to deal teams and stakeholders.'
     },
     {
