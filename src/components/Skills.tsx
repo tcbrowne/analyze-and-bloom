@@ -55,17 +55,10 @@ const Skills = () => {
     },
     {
       icon: Brain,
-      name: 'Machine Learning',
-      years: 4,
-      description: 'Classification, Regression, Clustering',
-      backDescription: 'Developed and deployed predictive models for customer segmentation, churn prediction, and demand forecasting. Experience with feature engineering, model selection, hyperparameter tuning, and A/B testing ML solutions in production.'
-    },
-    {
-      icon: PieChart,
-      name: 'Statistical Analysis',
-      years: 6,
-      description: 'Hypothesis Testing, A/B Testing',
-      backDescription: 'Applied rigorous statistical methods to validate business hypotheses and measure experiment outcomes. Expertise in experimental design, significance testing, confidence intervals, and communicating statistical findings to non-technical audiences.'
+      name: 'ML, AI & Statistics',
+      years: 5,
+      description: 'Classification, Regression, Clustering, Hypothesis Testing, A/B Testing, LLMs',
+      backDescription: 'Developed and deployed predictive models for customer segmentation, churn prediction, and demand forecasting. Applied rigorous statistical methods including hypothesis testing, A/B testing, and experimental design. Experience with feature engineering, model selection, and leveraging AI/LLM technologies to automate workflows and generate insights.'
     },
     {
       icon: Database,
