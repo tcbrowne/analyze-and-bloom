@@ -61,6 +61,13 @@ const Skills = () => {
       backDescription: 'Predictive modeling (revenue, churn, margin drivers). Segmentation & cohort analysis (customers, products, geographies). Statistical testing & experimentation (A/B tests, pricing validation). AI-enabled workflows (LLMs for data extraction, insights, automation).'
     },
     {
+      icon: Code,
+      name: 'Generative AI',
+      years: 3,
+      description: 'Copilot Studios, ChatGPT, LangChain, Prompt Engineering, RAG',
+      backDescription: 'Building and deploying generative AI solutions using Microsoft Copilot Studios, OpenAI APIs, and LangChain. Experience with prompt engineering, retrieval-augmented generation (RAG), fine-tuning, and integrating LLMs into enterprise workflows for document processing, knowledge management, and automated insights generation.'
+    },
+    {
       icon: Database,
       name: 'Database & Data Management',
       years: 6,
