@@ -19,6 +19,27 @@ const Skills = () => {
 
   const skills = [
     {
+      icon: TrendingUp,
+      name: 'M&A Advisory',
+      years: 4,
+      description: 'Buy-side & Sell-side Advisory, Deal Sourcing',
+      backDescription: 'Advised on mergers, acquisitions, and divestitures across multiple industries. Supported deal teams through transaction lifecycle management, market analysis, target identification, and strategic positioning for both buy-side and sell-side engagements.'
+    },
+    {
+      icon: PieChart,
+      name: 'Financial Due Diligence',
+      years: 4,
+      description: 'Quality of Earnings, Working Capital, Debt Analysis',
+      backDescription: 'Conducted comprehensive financial due diligence for private equity and strategic acquirers. Performed quality of earnings analyses, normalized EBITDA adjustments, working capital assessments, and identified key financial risks to inform deal pricing and structure.'
+    },
+    {
+      icon: BarChart,
+      name: 'Deal & M&A Analytics',
+      years: 4,
+      description: 'Deal Modeling, Integration Analytics, Synergy Analysis',
+      backDescription: 'Built data-driven models to evaluate deal viability, quantify synergies, and streamline post-merger integration planning. Leveraged analytics to identify trends in financial data, automate due diligence workflows, and deliver actionable insights to deal teams and stakeholders.'
+    },
+    {
       icon: Database,
       name: 'SQL & Databases',
       years: 6,
@@ -59,13 +80,6 @@ const Skills = () => {
       years: 5,
       description: 'KPI Development, Dashboard Design',
       backDescription: 'Led BI initiatives from requirements gathering to implementation. Designed KPI frameworks, built self-service analytics platforms, and partnered with leadership to establish data-driven decision-making cultures across organizations.'
-    },
-    {
-      icon: TrendingUp,
-      name: 'M&A and TAS',
-      years: 4,
-      description: 'Due Diligence, Deal Analytics, Integration',
-      backDescription: 'Supported M&A and Transaction Advisory Services engagements through financial data analysis, quality of earnings assessments, and due diligence analytics. Built models to evaluate deal viability, identify risks, and streamline post-merger integration planning.'
     },
   ];
 
