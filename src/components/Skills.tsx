@@ -55,10 +55,10 @@ const Skills = () => {
     },
     {
       icon: Brain,
-      name: 'ML, AI & Statistics',
+      name: 'Machine Learning & Applied Analytics',
       years: 5,
-      description: 'Classification, Regression, Clustering, Hypothesis Testing, A/B Testing, LLMs',
-      backDescription: 'Developed and deployed predictive models for customer segmentation, churn prediction, and demand forecasting. Applied rigorous statistical methods including hypothesis testing, A/B testing, and experimental design. Experience with feature engineering, model selection, and leveraging AI/LLM technologies to automate workflows and generate insights.'
+      description: 'Predictive Modeling, Segmentation, Statistical Testing, AI Workflows',
+      backDescription: 'Predictive modeling (revenue, churn, margin drivers). Segmentation & cohort analysis (customers, products, geographies). Statistical testing & experimentation (A/B tests, pricing validation). AI-enabled workflows (LLMs for data extraction, insights, automation).'
     },
     {
       icon: Database,
