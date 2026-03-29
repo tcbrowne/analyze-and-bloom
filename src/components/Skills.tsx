@@ -41,10 +41,10 @@ const Skills = () => {
     },
     {
       icon: Database,
-      name: 'SQL & Databases',
+      name: 'Database & Data Management',
       years: 6,
-      description: 'PostgreSQL, MySQL, MongoDB',
-      backDescription: 'Extensive experience designing and optimizing database schemas, writing complex queries, and managing data pipelines. Worked with both relational and NoSQL databases across multiple enterprise projects, handling datasets ranging from thousands to millions of records.'
+      description: 'SQL, PostgreSQL, MySQL, MongoDB, Snowflake',
+      backDescription: 'Extensive experience designing and optimizing database schemas, writing complex queries, and managing data pipelines. Worked with both relational and NoSQL databases as well as cloud data warehouses like Snowflake across multiple enterprise projects, handling datasets ranging from thousands to millions of records.'
     },
     {
       icon: Code,
