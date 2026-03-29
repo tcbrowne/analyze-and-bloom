@@ -40,13 +40,6 @@ const Skills = () => {
       backDescription: 'Built data-driven models to evaluate deal viability, quantify synergies, and streamline post-merger integration planning. Leveraged analytics to identify trends in financial data, automate due diligence workflows, and deliver actionable insights to deal teams and stakeholders.'
     },
     {
-      icon: Database,
-      name: 'Database & Data Management',
-      years: 6,
-      description: 'SQL, PostgreSQL, MySQL, MongoDB, Snowflake',
-      backDescription: 'Extensive experience designing and optimizing database schemas, writing complex queries, and managing data pipelines. Worked with both relational and NoSQL databases as well as cloud data warehouses like Snowflake across multiple enterprise projects, handling datasets ranging from thousands to millions of records.'
-    },
-    {
       icon: Code,
       name: 'Data Analytics',
       years: 5,
@@ -75,11 +68,11 @@ const Skills = () => {
       backDescription: 'Applied rigorous statistical methods to validate business hypotheses and measure experiment outcomes. Expertise in experimental design, significance testing, confidence intervals, and communicating statistical findings to non-technical audiences.'
     },
     {
-      icon: TrendingUp,
-      name: 'Business Intelligence',
-      years: 5,
-      description: 'KPI Development, Dashboard Design',
-      backDescription: 'Led BI initiatives from requirements gathering to implementation. Designed KPI frameworks, built self-service analytics platforms, and partnered with leadership to establish data-driven decision-making cultures across organizations.'
+      icon: Database,
+      name: 'Database & Data Management',
+      years: 6,
+      description: 'SQL, PostgreSQL, MySQL, MongoDB, Snowflake',
+      backDescription: 'Extensive experience designing and optimizing database schemas, writing complex queries, and managing data pipelines. Worked with both relational and NoSQL databases as well as cloud data warehouses like Snowflake across multiple enterprise projects, handling datasets ranging from thousands to millions of records.'
     },
   ];
 
